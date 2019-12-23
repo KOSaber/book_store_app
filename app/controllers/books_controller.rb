@@ -10,8 +10,6 @@ class BooksController < ApplicationController
     end
     def show
         @books = Book.find(params[:id])
-        # This code below has a quick demo of how to form a json object with nested ingredients on a recipe.
-        # render json: @book, include: :users
         #@books = @book.users
     end
     def new
@@ -20,9 +18,8 @@ class BooksController < ApplicationController
     
       def create    
         @book = Book.create(book_params)
-        current_user.books << @book
-        # @book.user_id = current_user.id
-        redirect_to userBook_path
+        current_user.books << @book  
+        redirect_to request.referer 
 
       end
       
@@ -52,9 +49,7 @@ class BooksController < ApplicationController
     def book_params
       params.require(:book).permit(:title, :auther, :publisher, :edition, :status, :pic, :price)
     end
-    def check_id
-      @book = current_user.books
-    end
+ 
 end
 
 

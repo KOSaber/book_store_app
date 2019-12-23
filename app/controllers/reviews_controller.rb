@@ -5,18 +5,17 @@ class ReviewsController < ApplicationController
     end
 
     def show
-        @reviews = Review.find(params[:id])
+        @review = Review.find(params[:id])
     end
 
     def new
-        @reviews = Review.new
+        @review = Review.new
     end
 
     def create    
         @review =Review.new(rev_params)
-        @review.user_id = current_user.id
         @review.save
-        redirect_to userBook_path
+        redirect_to request.referer 
       end
       
       def edit
@@ -33,6 +32,7 @@ class ReviewsController < ApplicationController
         Review.find(params[:id]).destroy
         redirect_to userBook_path
       end
+      private
       def rev_params
         params.require(:review).permit(:book_id, :recommend, :rate)
       end

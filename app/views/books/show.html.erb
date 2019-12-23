@@ -24,4 +24,22 @@
 
 </table>
 
+
+<% if  current_user and @books.user_ids.include? current_user.id %>
+<%= render 'reviews/form' %>
+<%end%>
+
+<table class="striped bordered">
+  <tr>
+    <th>Recommend</th>
+    <th>Rate</th>
+  </tr>
+<% @books.reviews.each do |r| %>
+  <tr>
+    <td><%= r.recommend %></td>
+    <td><%= r.rate %></td>
+  </tr>
+  <% end %>
+  </table>
+
 <%= link_to 'Back', books_path %>
