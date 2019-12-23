@@ -1,0 +1,29 @@
+<%= link_to "main" , books_path %>
+<%= link_to "myp age" , userBook_path %>
+
+<div class="field">
+  <%= form.select :book_id, Book.all.collect { |p| [ p.title, p.id ] } %>
+</div>
+
+<%= form_for @review do |f| %>
+    <div class="input-field col s6">
+    <%= f.label :recommend, 'Book review :'%>
+    <%= f.text_field :recommend %>
+</div>
+
+# <div class="input-field col s6">
+#     <%= f.label :rate, 'Book rate :'%>
+#     <%= f.text_field :rate %>
+# </div>
+
+# i wanna make this list of 10 to rate the book i select above ......
+<div class="field">
+<%= f.label :rate, 'Book rate :'%>
+#                    <%= form.select :book_id,((0..10).map {|i| [i,i] } %>
+
+options_for_select(0..10)
+<%= f.text_field :rate %>
+</div>
+
+    <%= f.submit "Submit", :class => "btn waves-effect waves-light" %>
+  <% end %>

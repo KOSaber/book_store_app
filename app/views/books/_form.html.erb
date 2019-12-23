@@ -1,0 +1,31 @@
+<%= form_for @book do |f| %>
+    <div class="input-field col s6">
+        <%= f.label :title, 'Book Title'%>
+        <%= f.text_field :title%>
+    </div>
+    <div class="input-field col s6">
+        <%= f.label :auther, 'Book Author'%>
+        <%= f.text_field :auther%>
+    </div>
+    <div class="input-field col s6">
+        <%= f.label :publisher, 'Book Publisher' %>
+        <%= f.text_field :publisher %>
+    </div>
+    <div class="input-field col s6">
+        <%= f.label :edition, 'Book Edition' %>
+        <%= f.text_field :edition %>
+    </div>
+    <div class="input-field col s6">
+        <%= f.label :status, 'Book Status' %>
+        <%= f.text_field :status %>
+    </div>
+    <div class="input-field col s6">
+        <%= f.label :pic, 'Book Picture' %>
+        <%= f.text_field :pic %>
+    </div>
+    <div class="input-field col s6">
+        <%= f.label :price, 'Book Price' %>
+        <%= f.text_field :price %>
+    </div>
+    <%= f.submit "Submit", :class => "btn waves-effect waves-light" %>
+  <% end %>

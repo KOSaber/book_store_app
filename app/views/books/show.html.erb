@@ -1,0 +1,27 @@
+<h1><%= @books.title %></h1>
+
+<table class="striped bordered">
+  <tr>
+    <th>Title</th>
+    <th>Author</th>
+    <th>Publisher</th>
+    <th>Edition</th>
+    <th>Status</th>
+    <th>Picture</th>
+    <th>Price</th>
+  </tr>
+
+  
+      <tr>
+        <td><%= @books.title %></td>
+        <td><%= @books.auther %></td>
+        <td><%= @books.publisher %></td>
+        <td><%= @books.edition %></td>
+        <td><%= @books.status %></td>
+        <td><%= image_tag(@books.pic, size: "100x100", alt: "Book Image") %></td>
+        <td><%= @books.price %></td>
+      </tr>
+
+</table>
+
+<%= link_to 'Back', books_path %>
