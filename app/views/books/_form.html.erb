@@ -1,31 +1,38 @@
+<div class = "container">
+<div>
+<img src="https://66.media.tumblr.com/077729f63cbb21c8f4cc5c5255336a98/tumblr_pdfdcpUdqU1xcbgkdo3_500.jpg" alt="book" height="100" width="100%" >
+</div>
+
 <%= form_for @book do |f| %>
     <div class="input-field col s6">
-        <%= f.label :title, 'Book Title'%>
+        <%= f.label :title, 'Book Title :'%>
         <%= f.text_field :title%>
     </div>
     <div class="input-field col s6">
-        <%= f.label :auther, 'Book Author'%>
+        <%= f.label :auther, 'Book Author :'%>
         <%= f.text_field :auther%>
     </div>
     <div class="input-field col s6">
-        <%= f.label :publisher, 'Book Publisher' %>
+        <%= f.label :publisher, 'Book Publisher :' %>
         <%= f.text_field :publisher %>
     </div>
     <div class="input-field col s6">
-        <%= f.label :edition, 'Book Edition' %>
+        <%= f.label :edition, 'Book Edition :' %>
         <%= f.text_field :edition %>
     </div>
     <div class="input-field col s6">
-        <%= f.label :status, 'Book Status' %>
+        <%= f.label :status, 'Book Status :' %>
         <%= f.text_field :status %>
     </div>
     <div class="input-field col s6">
-        <%= f.label :pic, 'Book Picture' %>
+        <%= f.label :pic, 'Book Picture :' %>
         <%= f.text_field :pic %>
     </div>
     <div class="input-field col s6">
-        <%= f.label :price, 'Book Price' %>
+        <%= f.label :price, 'Book Price :' %>
         <%= f.text_field :price %>
     </div>
-    <%= f.submit "Submit", :class => "btn waves-effect waves-light" %>
+    <%= f.submit "Submit", :class => "btn waves-effect waves-light btn btn-primary" %>
   <% end %>
+
+  </div>

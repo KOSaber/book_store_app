@@ -1,7 +1,9 @@
 
 <div class = "container">
-
-<div class = "container-fluid" style="background-color: gray;">
+<div>
+<img src="https://66.media.tumblr.com/077729f63cbb21c8f4cc5c5255336a98/tumblr_pdfdcpUdqU1xcbgkdo3_500.jpg" alt="book" height="100" width="100%" >
+</div>
+<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
 <ul class="nav nav-pills nav-justified">
 <li class="nav-item">
 <a class="nav-link active" href="books">Main Page</a>
@@ -10,7 +12,7 @@
     <a class="nav-link" href="/books/new">Create New Book</a>
   </li>
 </ul>
-</div>
+</nav>
 
 
 <h1 class = "display-3 text-center"><%= current_user.fname %>'s Books</h1>
@@ -19,7 +21,7 @@
 
 
 <table class="table table-hover  striped bordered">
-  <tr>
+  <tr class = 'label-info'>
     <th>Title</th>
     <th>Author</th>
     <th>Publisher</th>

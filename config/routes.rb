@@ -11,9 +11,6 @@ Rails.application.routes.draw do
   delete "books/:id", to: "books#destroy"
   get "books/:id", to: "books#show"
 
-  # get "/userBook/show/:rate" , to: "reviews#blank_stars"
-  get "books/show" , to: "reviews#blank_stars"
-
   get "reviews/new", to: "reviews#new"
   post  "reviews" , to: "reviews#create"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

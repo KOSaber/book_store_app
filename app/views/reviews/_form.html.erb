@@ -1,16 +1,21 @@
 
+<div class = "container">
+
 <%= form_for Review.new do |f| %>
     <%=f.hidden_field :book_id , :value => @books.id %>
-    <div class="input-field col s6">
+    <div class="form-group input-field">
     <%= f.label :recommend, 'Book review :'%>
-    <%= f.text_field :recommend %>
+    <%= f.text_area :recommend, class:"" %>
     </div>
 
-    <div class="field">
+    <div class="form-group field">
       <%= f.label :rate, 'Book rate :'%>
       <%= f.select :rate, [1,2,3,4,5] %>
     </div>
 
-  <%= f.submit "Submit", class:"btn waves-effect waves-light" %>
+  <%= f.submit "Submit", class:" form-group btn waves-effect waves-light btn-primary" %>
 
   <% end %>
+
+
+</div>
