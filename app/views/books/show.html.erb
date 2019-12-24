@@ -1,6 +1,19 @@
-<h1><%= @books.title %></h1>
+<div class = "container">
 
-<table class="striped bordered">
+<div class = "container-fluid" style="background-color: gray;">
+<ul class="nav nav-pills nav-justified">
+<li class="nav-item">
+<a class="nav-link active" href="../books">Main Page</a>
+</li>
+<li class="nav-item">
+<a class="nav-link active" href="/userBook">My Page</a>
+</li> 
+</ul>
+</div>
+
+<h1 class = "display-3 text-center"><%= @books.title %> Book</h1>
+
+<table class="table table-hover striped bordered">
   <tr>
     <th>Title</th>
     <th>Author</th>
@@ -29,7 +42,7 @@
 <%= render 'reviews/form' %>
 <%end%>
 
-<table class="striped bordered">
+<table class="table table-hover striped bordered">
   <tr>
     <th>Recommend</th>
     <th>Rate</th>
@@ -37,9 +50,16 @@
 <% @books.reviews.each do |r| %>
   <tr>
     <td><%= r.recommend %></td>
-    <td><%= r.rate %></td>
+    <td>
+    <% r.rate.times do  %>
+      <span class="glyphicon glyphicon-star"></span>
+     <% end %>
+     
+     </td>
   </tr>
   <% end %>
   </table>
 
 <%= link_to 'Back', books_path %>
+
+</div>

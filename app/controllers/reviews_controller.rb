@@ -27,6 +27,9 @@ class ReviewsController < ApplicationController
         review.update(rev_params)
         redirect_to userBook_path
       end
+      def blank_stars
+        5 - rate
+      end
 
     def destroy
         Review.find(params[:id]).destroy

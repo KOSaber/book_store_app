@@ -1,6 +1,14 @@
 class Book < ApplicationRecord
   has_many :reviews, dependent: :destroy
   has_and_belongs_to_many :users
-  # validates :name, presence: true, uniqueness: true, format: { with: /\A[a-zA-Z]+\z/,
-  # message: "only allows letters" }, length: { minimum: 4,maximum: 10, too_short: "must have at least %{count} letters" }
+
+  validates :title,presence: true, uniqueness: false , length: { minimum: 3, too_short: "must write valid book name" }
+  validates :auther, :publisher, :edition, presence: true, uniqueness: false, format: { with: /\A[a-zA-Z]+\z/,
+  message: "only allows letters" } , length: { minimum: 3,maximum: 10, too_short: "must have at least %{count} letters" }
+  validates :price, presence: true, uniqueness: false, numericality: true
+
+  validates :pic, presence: true, uniqueness: false
+
+  validates :status, presence: true, uniqueness: false, format: { with: /\A[a-zA-Z]+\z/,
+  message: "only allows letters" }, length: { minimum: 8,maximum: 15, too_short: "must have at least %{count} letters" }
 end
