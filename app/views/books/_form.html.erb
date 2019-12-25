@@ -1,38 +1,42 @@
-<div class = "container">
-<div>
-<img src="https://66.media.tumblr.com/077729f63cbb21c8f4cc5c5255336a98/tumblr_pdfdcpUdqU1xcbgkdo3_500.jpg" alt="book" height="100" width="100%" >
-</div>
+
 
 <%= form_for @book do |f| %>
-    <div class="input-field col s6">
+    <div class="form-group col-md-6">
         <%= f.label :title, 'Book Title :'%>
-        <%= f.text_field :title%>
+        <%= f.text_field :title, class:"form-control" %>
     </div>
-    <div class="input-field col s6">
+    <div class="form-group col-md-6">
         <%= f.label :auther, 'Book Author :'%>
-        <%= f.text_field :auther%>
+        <%= f.text_field :auther , class:"form-control " %>
     </div>
-    <div class="input-field col s6">
+    <div class="form-group col-md-6">
         <%= f.label :publisher, 'Book Publisher :' %>
-        <%= f.text_field :publisher %>
+        <%= f.text_field :publisher, class:"form-control" %>
     </div>
-    <div class="input-field col s6">
+    <div class="form-group col-md-6">
         <%= f.label :edition, 'Book Edition :' %>
-        <%= f.text_field :edition %>
+        <%= f.text_field :edition, class:"form-control" %>
     </div>
-    <div class="input-field col s6">
+    <div class="form-group col-md-6">
         <%= f.label :status, 'Book Status :' %>
-        <%= f.text_field :status %>
+        <%= f.text_field :status , class:"form-control" %>
     </div>
-    <div class="input-field col s6">
+    <div class="form-group col-md-6">
+    
         <%= f.label :pic, 'Book Picture :' %>
-        <%= f.text_field :pic %>
+        <%= f.url_field :pic, class:"form-control" %>
+        
     </div>
-    <div class="input-field col s6">
+    <div class="form-group col-md-6">
         <%= f.label :price, 'Book Price :' %>
-        <%= f.text_field :price %>
+        <%= f.text_field :price, class:"form-control" %>
     </div>
-    <%= f.submit "Submit", :class => "btn waves-effect waves-light btn btn-primary" %>
+
+    <div class="form-group col-md-6">
+    <%= f.label :submit  ,class:"invisible" %>
+    <%= f.submit "Submit", :class => "form-control btn waves-effect waves-light btn-primary" %>
+    </div>
+
   <% end %>
 
-  </div>
+ 

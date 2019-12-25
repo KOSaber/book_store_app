@@ -8,33 +8,33 @@
 <% end %>
 
 
-<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+<nav  class="navbar navbar-light" style="background-color: #e3f2fd;">
 <% if user_signed_in? %>
-<a class="navbar-brand" href="#">Logged in as <strong><%= current_user.email %></strong></a>
+<a  href="#"><h5>Logged in as <%= current_user.email %></h5></a>
 
 
 
-    <ul class="navbar-nav mr-auto">
-    <div class="row m-auto">
+  <ul class="navbar-nav">
+    <div class="row">
     <li class="nav-item">
-    <%= link_to "Edit profile", edit_user_registration_path, class:'nav-item '  %>
+    <%= link_to "Edit profile", edit_user_registration_path, class:'nav-item mr-4'  %>
     </li>
-    <li class="nav-item ">
+    <li class="nav-item">
     <%= link_to "Logout", destroy_user_session_path, method: :delete, class:'nav-item'  %>
     </li>
     </div>
     
     <%else%>
  
-    <div class="row m-auto">
+      <h5>welcome to our bookstore .. to share your books with others you have to Sign in</h5>
       <li class="nav-item">
-        <%= link_to "Login", new_user_session_path, class:'nav-item mr-2'  %>
+        <%= link_to "Login", new_user_session_path, class:'nav-item'  %>
       </li>
       <li class="nav-item">
         <%= link_to "Sign up", new_user_registration_path, class:'nav-item'  %>
       </li>
-      </div>
-</ul>
+      
+    </ul>
     <%end%>
     
 </nav>

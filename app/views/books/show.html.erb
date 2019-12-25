@@ -7,17 +7,17 @@
 <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
 <ul class="nav nav-pills nav-justified">
 <li class="nav-item">
-<a class="nav-link active" href="../books">Main Page</a>
+<a class="active" href="../books">Main Page</a>
 </li>
 <li class="nav-item">
-<a class="nav-link active" href="/userBook">My Page</a>
+<a class="active" href="/userBook">My Page</a>
 </li> 
 </ul>
 </nav>
-<h1 class = "display-3 text-center"><%= @books.title %> Book</h1>
+<h1 class = "text-center"><%= @books.title %> Book</h1>
 
-<table class="table table-hover striped bordered">
-  <tr class = 'label-info'>
+<table class="table table-hover">
+  <tr class = 'label-info '>
     <th>Title</th>
     <th>Author</th>
     <th>Publisher</th>
@@ -27,7 +27,6 @@
     <th>Price</th>
   </tr>
 
-  
       <tr>
         <td><%= @books.title %></td>
         <td><%= @books.auther %></td>
@@ -46,7 +45,7 @@
 <%end%>
 
 <table class="table table-hover striped bordered">
-  <tr>
+  <tr class = 'label-info'>
     <th>Recommend</th>
     <th>Rate</th>
   </tr>
@@ -56,13 +55,13 @@
     <td>
     <% r.rate.times do  %>
       <span class="glyphicon glyphicon-star"></span>
-     <% end %>
+     <% end %><% (5-r.rate).times do %>
+      <span class="glyphicon glyphicon-star-empty"></span>
+      <% end %>
      
      </td>
   </tr>
   <% end %>
   </table>
-
-<%= link_to 'Back', books_path %>
 
 </div>

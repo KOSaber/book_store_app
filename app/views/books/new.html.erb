@@ -1,6 +1,22 @@
+<div class = "container">
+<div>
+<img src="https://66.media.tumblr.com/077729f63cbb21c8f4cc5c5255336a98/tumblr_pdfdcpUdqU1xcbgkdo3_500.jpg" alt="book" height="100" width="100%" >
+</div>
 
-<h1>New Book</h1>
+<nav class="navbar navbar-light" style="background-color: #f5f3f2;">
+<ul class="nav nav-pills nav-justified">
+<li class="nav-item">
+<a class="active" style="background-color: #e3f2fd;" href="/books">Main Page</a>
+</li>
+<li class="nav-item">
+<a class="active" href="/userBook">My Page</a>
+</li>
+</ul>
+</nav>
+
+<h1 class = " text-center">New Book</h1>
 
 <%= render 'books/form' %>
+
+  </div>
   
-  <%= link_to 'Back', userBook_path %>

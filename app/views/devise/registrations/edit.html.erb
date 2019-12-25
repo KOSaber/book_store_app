@@ -4,65 +4,73 @@
 <img src="https://66.media.tumblr.com/077729f63cbb21c8f4cc5c5255336a98/tumblr_pdfdcpUdqU1xcbgkdo3_500.jpg" alt="book" height="100" width="100%" >
 </div>
 
-<h2 class = "display-3 text-center">Edit <%= resource_name.to_s.humanize %></h2>
+<nav class="navbar navbar-light" style="background-color: #f5f3f2;">
+<ul class="nav nav-pills nav-justified">
+<li class="nav-item">
+<a class="active" style="background-color: #e3f2fd;" href="/books">Main Page</a>
+</li>
+<li class="nav-item">
+<a class=" active " style="background-color: #e3f2fd;" href="/userBook">My Page</a>
+</li>
+</ul>
+</nav>
+
+<h1 class = " text-center">Edit <%= resource_name.to_s.humanize %></h1>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
+  <div class="form-group col-md-6">
     <%= f.label :fname, 'First Name :' %><br />
-    <%= f.text_field :fname, autofocus: true, autocomplete: "First Name :" %>
+    <%= f.text_field :fname, autofocus: true, autocomplete: "First Name :", class:"form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group col-md-6">
     <%= f.label :lname, 'Last Name :' %><br />
-    <%= f.text_field :lname, autofocus: true, autocomplete: "Last Name :" %>
+    <%= f.text_field :lname, autofocus: true, autocomplete: "Last Name :", class:"form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group col-md-6">
     <%= f.label :phone, 'Phone Number :' %><br />
-    <%= f.text_field :phone, autofocus: true, autocomplete: "Phone Number :" %>
+    <%= f.text_field :phone, autofocus: true, autocomplete: "Phone Number :", class:"form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group col-md-6">
     <%= f.label :no_book , 'Number of books you borrow :' %><br />
-    <%= f.text_field :no_book, autofocus: true, autocomplete: "Number of books you borrow :" %>
+    <%= f.text_field :no_book, autofocus: true, autocomplete: "Number of books you borrow :", class:"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group col-md-6">
     <%= f.label :email, 'Email :' %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "Email :" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "Email :", class:"form-control" %>
   </div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
+  <div class="form-group col-md-6">
+    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><em><%= @minimum_password_length %> characters minimum</em><br />
+    <%= f.password_field :password, autocomplete: "new-password" , class:"form-control"%>
     <% if @minimum_password_length %>
-      <br />
-      <em><%= @minimum_password_length %> characters minimum</em>
     <% end %>
   </div>
 
-  <div class="field">
+  <div class="form-group col-md-6">
     <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "current-password" %>
+  <div class="form-group col-md-6">
+    <%= f.label :current_password %> <br />
+    <%= f.password_field :current_password, autocomplete: "current-password", class:"form-control" %>
   </div>
 
-  <div class="actions">
-    <%= f.submit "Update",class:"btn-primary" %>
+  <div class="actions form-group col-md-2">
+    <%= f.submit "Update",class:"btn-primary form-control btn waves-effect waves-light" %>
   </div>
 <% end %>
 
-<h3>Cancel my account</h3>
-
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete,class:"btn-primary" %></p>
-
-<%= link_to "Back", :back %>
+ 
+<div class="actions form-group col-md-2">
+<%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete,class:"btn-primary btn waves-effect waves-light form-control" %>
+</div>
 
 </div>
