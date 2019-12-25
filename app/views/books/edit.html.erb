@@ -1,3 +1,20 @@
-<h1>Edit <%= @book.title %></h1>
+<div class = "container">
+<div>
+<img src="https://66.media.tumblr.com/077729f63cbb21c8f4cc5c5255336a98/tumblr_pdfdcpUdqU1xcbgkdo3_500.jpg" alt="book" height="100" width="100%" >
+</div>
+
+<nav class="navbar navbar-light" style="background-color: #f5f3f2;">
+<ul class="nav nav-pills nav-justified">
+<li class="nav-item">
+<a class="active" style="background-color: #e3f2fd;" href="/books">Main Page</a>
+</li>
+<li class="nav-item">
+<a class="active" style="background-color: #e3f2fd;" href="/userBook">My Page</a>
+</li>
+</ul>
+</nav>
+
+<h1 class = " text-center">Edit <%= @book.title %></h1>
 
 <%= render 'books/form' %>
+</div>
