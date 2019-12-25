@@ -18,8 +18,9 @@ class BooksController < ApplicationController
     
       def create    
         @book = Book.create(book_params)
-        current_user.books << @book  
-        redirect_to request.referer 
+        current_user.books << @book 
+        redirect_to  userBook_path
+        # redirect_to request.referer 
 
       end
       
