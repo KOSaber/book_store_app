@@ -6,8 +6,8 @@
 A Book Store is a website designed to share Book Reviews. Everyone has a book that they read and want to share it. This website lets you sign up and add your books then you can write your comments and rating for each book you have added. So, every one can see your books information and your opinion on it .
 
 # Used Technologies:
-- [x] Bootstrap
 - [x] Ruby on Rails
+- [x] Bootstrap
 - [x] My SQL
 
 ### wireframes :
@@ -50,3 +50,4 @@ A Book Store is a website designed to share Book Reviews. Everyone has a book th
 - [x]  See if the user borrowed the book or added it.
 
 ## Created by KS ..
+ https://kosaber.github.io/book_store_app/.
