@@ -49,5 +49,10 @@ A Book Store is a website designed to share Book Reviews. Everyone has a book th
 - [x]  Change book status to unavailabe if borrowed.
 - [x]  See if the user borrowed the book or added it.
 
-## Created by KS ..
+## Heroku Link :
+ https://khadijah-book-store-app.herokuapp.com/
+
+## GitHub Link :
  https://kosaber.github.io/book_store_app/.
+ 
+ ## Created by KS ..
